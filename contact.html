@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - Amar Singh</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;600;800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <style>
         .contact-section {
@@ -12,6 +15,7 @@
             display: flex;
             justify-content: center;
         }
+
         .contact-form-container {
             background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(0, 0, 0, 0.5));
             backdrop-filter: blur(20px);
@@ -21,15 +25,18 @@
             width: 100%;
             max-width: 600px;
         }
+
         .contact-form-container h2 {
             font-family: 'Outfit', sans-serif;
             font-size: 36px;
             margin-bottom: 40px;
             text-align: center;
         }
+
         .form-group {
             margin-bottom: 25px;
         }
+
         .form-group label {
             display: block;
             margin-bottom: 10px;
@@ -38,7 +45,9 @@
             text-transform: uppercase;
             letter-spacing: 1px;
         }
-        .form-group input, .form-group textarea {
+
+        .form-group input,
+        .form-group textarea {
             width: 100%;
             padding: 15px 20px;
             background: rgba(0, 0, 0, 0.3);
@@ -49,10 +58,13 @@
             font-size: 16px;
             transition: border-color 0.3s;
         }
-        .form-group input:focus, .form-group textarea:focus {
+
+        .form-group input:focus,
+        .form-group textarea:focus {
             outline: none;
             border-color: #e85d22;
         }
+
         .submit-btn {
             width: 100%;
             background: #e85d22;
@@ -65,11 +77,13 @@
             cursor: pointer;
             transition: background 0.3s;
         }
+
         .submit-btn:hover {
             background: #f7682d;
         }
     </style>
 </head>
+
 <body>
     <div id="animation-container">
         <canvas id="hero-lightpass"></canvas>
@@ -101,8 +115,11 @@
                 <h2>Let's work together</h2>
                 <p style="text-align: center; color: #aaa; margin-bottom: 30px; font-size: 16px;">
                     Or reach out directly:<br>
-                    <a href="mailto:amarfzd12@gmail.com" style="color: #e85d22; text-decoration: none; font-weight: 500;">amarfzd12@gmail.com</a> &nbsp;|&nbsp; 
-                    <a href="tel:7704913136" style="color: #e85d22; text-decoration: none; font-weight: 500;">7704913136</a>
+                    <a href="mailto:amarfzd12@gmail.com"
+                        style="color: #e85d22; text-decoration: none; font-weight: 500;">amarfzd12@gmail.com</a>
+                    &nbsp;|&nbsp;
+                    <a href="tel:7704913136"
+                        style="color: #e85d22; text-decoration: none; font-weight: 500;">7704913136</a>
                 </p>
                 <form id="contactForm">
                     <div class="form-group">
@@ -115,10 +132,13 @@
                     </div>
                     <div class="form-group">
                         <label for="message">Project Details</label>
-                        <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+                        <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..."
+                            required></textarea>
                     </div>
                     <button type="submit" class="submit-btn" id="submitBtn">Send Message</button>
-                    <div id="formMessage" style="margin-top: 20px; text-align: center; display: none; font-size: 14px; font-weight: 500;"></div>
+                    <div id="formMessage"
+                        style="margin-top: 20px; text-align: center; display: none; font-size: 14px; font-weight: 500;">
+                    </div>
                 </form>
             </div>
         </section>
@@ -138,19 +158,19 @@
 
     <script src="script.js"></script>
     <script>
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
+        document.getElementById('contactForm').addEventListener('submit', function (e) {
             e.preventDefault();
-            
+
             const btn = document.getElementById('submitBtn');
             const msg = document.getElementById('formMessage');
-            
+
             // Get data
             const formData = {
                 name: document.getElementById('name').value,
                 email: document.getElementById('email').value,
                 message: document.getElementById('message').value
             };
-            
+
             // UI Loading state
             btn.textContent = 'Sending...';
             btn.style.opacity = '0.7';
@@ -164,28 +184,29 @@
                 },
                 body: JSON.stringify(formData)
             })
-            .then(response => response.json())
-            .then(data => {
-                btn.textContent = 'Send Message';
-                btn.style.opacity = '1';
-                msg.style.display = 'block';
-                if(data.ok || data.status === 'success') {
-                    msg.style.color = '#4ade80'; // Success green
-                    msg.textContent = 'Thank you! Your message has been sent successfully.';
-                    document.getElementById('contactForm').reset();
-                } else {
-                    msg.style.color = '#f87171'; // Error red
-                    msg.textContent = 'Oops! Something went wrong.';
-                }
-            })
-            .catch(error => {
-                btn.textContent = 'Send Message';
-                btn.style.opacity = '1';
-                msg.style.display = 'block';
-                msg.style.color = '#f87171';
-                msg.textContent = 'Network error. Please try again later.';
-            });
+                .then(response => response.json())
+                .then(data => {
+                    btn.textContent = 'Send Message';
+                    btn.style.opacity = '1';
+                    msg.style.display = 'block';
+                    if (data.ok || data.status === 'success') {
+                        msg.style.color = '#4ade80'; // Success green
+                        msg.textContent = 'Thank you! Your message has been sent successfully.';
+                        document.getElementById('contactForm').reset();
+                    } else {
+                        msg.style.color = '#f87171'; // Error red
+                        msg.textContent = 'Oops! Something went wrong.';
+                    }
+                })
+                .catch(error => {
+                    btn.textContent = 'Send Message';
+                    btn.style.opacity = '1';
+                    msg.style.display = 'block';
+                    msg.style.color = '#f87171';
+                    msg.textContent = 'Network error. Please try again later.';
+                });
         });
     </script>
 </body>
+
 </html>
