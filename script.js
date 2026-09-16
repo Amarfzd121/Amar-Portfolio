@@ -49,3 +49,11 @@ window.addEventListener('resize', () => {
 });
 
 preloadImages();
+
+fetch("submit.php", {
+    method: "POST",
+    headers: {
+        "Content-Type": "application/json"
+    },
+    body: JSON.stringify(formData)
+})
