@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Amar Singh</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;600;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Specific tweaks for about page if needed */
+        .hero-about {
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .about-detailed {
+            padding: 150px 0;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .about-detailed p {
+            font-size: 20px;
+            line-height: 1.8;
+            color: #ddd;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="animation-container">
+        <canvas id="hero-lightpass"></canvas>
+    </div>
+
+    <div id="content-wrapper">
+        <header>
+            <a href="index.html" class="logo" style="color: white; text-decoration: none;">Amarsweb</a>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="about.html" class="active">About</a>
+                <a href="projects.html">Projects</a>
+                <a href="services.html">Services</a>
+                <a href="testimonials.html">Testimonials</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <a href="#" class="btn">Start a Project <span>↗</span></a>
+        </header>
+
+        <section class="hero container">
+            <div class="hero-bg-text">ABOUT ME</div>
+            <div class="hero-content hero-about">
+                <!-- Keep the hero clear so the background animation is prominent -->
+            </div>
+        </section>
+
+        <section class="about-detailed container">
+            <div class="about-label" style="justify-content: center; margin-bottom: 20px;">The Journey</div>
+            <h2
+                style="font-family: 'Outfit', sans-serif; font-size: 48px; font-weight: 300; text-align: center; margin-bottom: 50px;">
+                Crafting Digital Experiences</h2>
+
+            <p>Hi, I'm Amar Singh. I specialize in bridging the gap between stunning aesthetic design and robust
+                technical architecture. My passion lies in creating digital experiences that don't just look visually
+                breathtaking, but also deliver tangible business results.</p>
+
+            <p>With a foundation in UI/UX design and full-stack development, I approach every project holistically. I
+                believe that a website should be your hardest-working employee — available 24/7, perfectly representing
+                your brand, and effortlessly converting visitors into clients.</p>
+
+            <p>When I'm not coding or designing, I'm constantly exploring the latest trends in web animation,
+                performance optimization, and interactive storytelling to ensure my clients always stay ahead of the
+                curve.</p>
+        </section>
+
+        <div class="marquee-container" style="margin-top: 50px;">
+            <div class="marquee">
+                <span>UI/UX DESIGN <i>✦</i> FRONTEND DEVELOPMENT <i>✦</i> BRANDING <i>✦</i> MOTION GRAPHICS <i>✦</i>
+                    UI/UX DESIGN <i>✦</i> FRONTEND DEVELOPMENT <i>✦</i></span>
+                <span>UI/UX DESIGN <i>✦</i> FRONTEND DEVELOPMENT <i>✦</i> BRANDING <i>✦</i> MOTION GRAPHICS <i>✦</i>
+                    UI/UX DESIGN <i>✦</i> FRONTEND DEVELOPMENT <i>✦</i></span>
+            </div>
+        </div>
+
+        <footer class="site-footer">
+            <div class="container footer-content">
+                <div class="logo">Amarsweb</div>
+                <p>&copy; 2024 Amar Singh. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#">Twitter</a>
+                    <a href="https://www.linkedin.com/in/amar-singh-b98534328" target="_blank"
+                        rel="noopener noreferrer">LinkedIn</a>
+                    <a href="#">Dribbble</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
